@@ -14,6 +14,7 @@ import { DashboardLayout } from '@/components';
 import { GossipPage } from '@/pages/gossip';
 import Donations from '@/pages/donations/Donations';
 import DonationDetails from '@/pages/donations/DonationDetails';
+import UserManagement from '@/pages/donations/UserManagement';
 export const router = createBrowserRouter([
   {
     path: path.HOME,
@@ -79,4 +80,9 @@ export const router = createBrowserRouter([
       }
     ]
   }
+,
+{
+  path:path.USER_MANAGEMENT,
+  element:<UserManagement/>,
+}
 ]);

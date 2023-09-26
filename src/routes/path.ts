@@ -11,5 +11,6 @@ export const path = {
   GOSSIP: '/gossips',
   PRODUCT: '/product',
   SERVICES: '/services',
-  SERVICES_DETAIL: '/services/:id'
+  SERVICES_DETAIL: '/services/:id',
+  USER_MANAGEMENT: '/user-management'
 };
