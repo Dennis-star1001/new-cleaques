@@ -15,6 +15,9 @@ import { GossipPage } from '@/pages/gossip';
 import Donations from '@/pages/donations/Donations';
 import DonationDetails from '@/pages/donations/DonationDetails';
 import UserManagement from '@/pages/donations/UserManagement';
+import VendorManagement from '@/pages/vendor/VendorManagement';
+import VendorManagementDonation from '@/pages/vendor/Donation';
+import ViewVendorDonation from '@/pages/vendor/ViewVendorDonation';
 export const router = createBrowserRouter([
   {
     path: path.HOME,
@@ -26,11 +29,11 @@ export const router = createBrowserRouter([
   },
   {
     path: path.DONATIONS,
-    element: <Donations/>
+    element: <Donations />
   },
   {
     path: path.DONATION_DETAILS,
-    element: <DonationDetails/>
+    element: <DonationDetails />
   },
   {
     path: path.SHOP,
@@ -80,9 +83,24 @@ export const router = createBrowserRouter([
       }
     ]
   }
-,
-{
-  path:path.USER_MANAGEMENT,
-  element:<UserManagement/>,
-}
+  ,
+  {
+    path: path.USER_MANAGEMENT,
+    element: <UserManagement />,
+  },
+  {
+    path: path.VENDOR_MANAGEMENT,
+    element: <VendorManagement />,
+   
+  },
+  {
+    path: path.VENDOR_MANAGEMENT_DONATIONS,
+    element: <VendorManagementDonation />,
+   
+  },
+  {
+    path: path.VIEW_VENDOR_MANAGEMENT_DONATIONS,
+    element: <ViewVendorDonation />,
+   
+  }
 ]);

@@ -12,5 +12,10 @@ export const path = {
   PRODUCT: '/product',
   SERVICES: '/services',
   SERVICES_DETAIL: '/services/:id',
-  USER_MANAGEMENT: '/user-management'
+  USER_MANAGEMENT: '/user-management',
+  VENDOR_MANAGEMENT: '/vendor-management',
+  VENDOR_MANAGEMENT_BOOKINGS: '/vendor-management-bookings',
+  VENDOR_MANAGEMENT_DONATIONS: '/vendor-management-donations',
+  VIEW_VENDOR_MANAGEMENT_DONATIONS: '/view-vendor-management-donations',
+  VENDOR_MANAGEMENT_EVENTS: '/vendor-management-events',
 };
