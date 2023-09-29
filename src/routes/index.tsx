@@ -18,6 +18,7 @@ import UserManagement from '@/pages/donations/UserManagement';
 import VendorManagement from '@/pages/vendor/VendorManagement';
 import VendorManagementDonation from '@/pages/vendor/Donation';
 import ViewVendorDonation from '@/pages/vendor/ViewVendorDonation';
+import Bookings from '@/pages/vendor/Booking';
 export const router = createBrowserRouter([
   {
     path: path.HOME,
@@ -89,18 +90,23 @@ export const router = createBrowserRouter([
     element: <UserManagement />,
   },
   {
+    path: path.VENDOR_BOOKING,
+    element: <Bookings/>
+
+  },
+  {
     path: path.VENDOR_MANAGEMENT,
     element: <VendorManagement />,
-   
+
   },
   {
     path: path.VENDOR_MANAGEMENT_DONATIONS,
     element: <VendorManagementDonation />,
-   
+
   },
   {
     path: path.VIEW_VENDOR_MANAGEMENT_DONATIONS,
     element: <ViewVendorDonation />,
-   
+
   }
 ]);

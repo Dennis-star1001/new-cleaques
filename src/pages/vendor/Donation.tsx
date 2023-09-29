@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 
 const VendorManagementDonation = () => {
     const NavLink = [
-        { name: "Bookings", to: "/" },
+        { name: "Bookings", to: "/booking" },
         { name: "Donations", to: "/vendor-management-donations" },
         { name: "Ticket", to: "" },
-        { name: "Points", to: "" },
-        { name: "Rewards", to: "" },
+        
     ]
     return (
         <Box bg='#E1EEF3' p='20'>

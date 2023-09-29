@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const VendorManagement = () => {
     const NavLink = [
-        { name: "Bookings", to: "/" },
+        { name: "Bookings", to: "/booking" },
         { name: "Donations", to: "/vendor-management-donations" },
       
         { name: "Event", to: "" },

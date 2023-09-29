@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ViewVendorDonation = () => {
     const NavLink = [
-        { name: "Bookings", to: "/" },
+        { name: "Bookings", to: "/booking" },
         { name: "Donations", to: "/vendor-management-donations" },
 
         { name: "Event", to: "" },
