@@ -9,7 +9,7 @@ const Bookings = () => {
         { name: "Event", to: "" },
     ]
 
-    const BookingCard = () => {
+    const BookingCard = ({ status }: any) => {
         return (
             <Flex gap='2' bg='#E1EEF3' p='5' mx='10' >
                 <Image
@@ -17,7 +17,7 @@ const Bookings = () => {
                     h='120px'
                     src='https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
                 />
-                <Flex gap='20'>
+                <Flex justifyContent={'space-between'} w='full'>
                     <Flex flexDirection={'column'} gap='3'>
                         <Text fontWeight={'500'} fontSize={'20'} color='#00B0F3'>Full- Stack web development</Text>
                         <Text>Service II: React Development</Text>
@@ -30,14 +30,23 @@ const Bookings = () => {
                             <Text fontSize={'xs'}>August 12, 2023</Text>
                         </Flex>
                     </Flex>
-                    <Flex flexDirection={'column'} alignItems={'center'}>
-                        <Flex gap='3'>
-                            <Button bg='#00BF00'>Accept</Button>
-                            <Button bg='#F20E0E'>Reject</Button>
+                    {status == "Active" || status === "Paid" || status === "Cancelled" || status === "Completed" ?
+
+
+                        <Flex flexDirection={'column'} alignItems={'center'} gap='1'>
+                            <Button>View Details</Button>
+                            <Text color='#00B0F3'>{status}</Text>
                         </Flex>
-                        <Text color='#00B0F3'>Message Client</Text>
-                    </Flex>
-                   
+                        :
+
+                        <Flex flexDirection={'column'} alignItems={'center'} gap='1'>
+                            <Flex gap='3'>
+                                <Button bg='#00BF00'>Accept</Button>
+                                <Button bg='#F20E0E'>Reject</Button>
+                            </Flex>
+                            <Text color='#00B0F3'>Message Client</Text>
+                        </Flex>
+                    }
                 </Flex>
             </Flex>
         )
@@ -56,8 +65,8 @@ const Bookings = () => {
                     ))}
                 </Flex>
                 <Flex flexDirection={'column'} gap='5' bg='white' py='10' h='auto' w='7xl'>
-                    <Text px='10' py='5' fontWeight={'600'}>Donations</Text>
-                    <BookingCard />
+                    <Text px='10' py='5' fontWeight={'600'} textTransform={'uppercase'}>Bookings</Text>
+                    <BookingCard  status='Active'/>
                     <BookingCard />
                     <BookingCard />
                     <BookingCard />
