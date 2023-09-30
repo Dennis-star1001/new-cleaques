@@ -14,11 +14,19 @@ import { DashboardLayout } from '@/components';
 import { GossipPage } from '@/pages/gossip';
 import Donations from '@/pages/donations/Donations';
 import DonationDetails from '@/pages/donations/DonationDetails';
-import UserManagement from '@/pages/donations/UserManagement';
-import VendorManagement from '@/pages/vendor/VendorManagement';
-import VendorManagementDonation from '@/pages/vendor/Donation';
-import ViewVendorDonation from '@/pages/vendor/ViewVendorDonation';
-import Bookings from '@/pages/vendor/Booking';
+import UserManagement from '@/pages/donations/UserManagement/Donation';
+import DonationUserManagement from '@/pages/donations/UserManagement/Donation';
+import BookingUserManagement from '@/pages/donations/UserManagement/Booking';
+
+import TicketUserManagement from '@/pages/donations/UserManagement/Ticket';
+import RewardUserManagement from '@/pages/donations/UserManagement/Reward/Reward';
+import PointUserManagement from '@/pages/donations/UserManagement/Point';
+import NigerianDomiciallyAccount from '@/pages/donations/UserManagement/Reward/DepositeToBank/NigerianDomiciallyAccount';
+import NigeriaLocalGov from '@/pages/donations/UserManagement/Reward/DepositeToBank/NigeriaLocalGov';
+import USAccount from '@/pages/donations/UserManagement/Reward/DepositeToBank/USAccount';
+import SharePoints from '@/pages/donations/UserManagement/Reward/SharePoint/SharePoint';
+import BuyMorePoints from '@/pages/donations/UserManagement/Reward/BuyMorePoint/BuyMorePoints';
+
 export const router = createBrowserRouter([
   {
     path: path.HOME,
@@ -86,27 +94,43 @@ export const router = createBrowserRouter([
   }
   ,
   {
-    path: path.USER_MANAGEMENT,
-    element: <UserManagement />,
+    path: path.DONATION_USER_MANAGEMENT,
+    element: <DonationUserManagement />,
   },
   {
-    path: path.VENDOR_BOOKING,
-    element: <Bookings/>
-
+    path: path.POINT_USER_MANAGEMENT,
+    element: <PointUserManagement />,
   },
-  {
-    path: path.VENDOR_MANAGEMENT,
-    element: <VendorManagement />,
-
-  },
-  {
-    path: path.VENDOR_MANAGEMENT_DONATIONS,
-    element: <VendorManagementDonation />,
-
-  },
-  {
-    path: path.VIEW_VENDOR_MANAGEMENT_DONATIONS,
-    element: <ViewVendorDonation />,
-
-  }
+ {
+  path:path.BOOKINGS_USER_MANAGEMENT,
+  element:<BookingUserManagement/>
+ },
+ {
+  path:path.REWARD_USER_MANAGEMENT,
+  element:<RewardUserManagement/>
+ },
+ {
+  path:path.TICKET_USER_MANAGEMENT,
+  element:<TicketUserManagement/>
+ },
+ {
+  path:path.NIGERIA_DOMICIALLY_ACCOUNT,
+  element:<NigerianDomiciallyAccount/>
+ },
+ {
+  path:path.NIGERIA_LOCAL_GOVERNMENT,
+  element:<NigeriaLocalGov/>
+ },
+ {
+  path:path.US_ACCOUNT,
+  element:<USAccount/>
+ },
+ {
+  path:path.SHARE_POINTS,
+  element:<SharePoints/>
+ },
+ {
+  path:path.BUY_MORE_POINTS,
+  element:<BuyMorePoints/>
+ }
 ]);
